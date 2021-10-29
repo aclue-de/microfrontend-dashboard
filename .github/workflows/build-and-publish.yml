@@ -45,7 +45,7 @@ jobs:
       - name: Update package.json main entry
         uses: jossef/action-set-json-field@v1
         with:
-          file: packages/components/package.json
+          file: ./package.json
           field: main
           value: dist/index.js
 
