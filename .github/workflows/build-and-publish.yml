@@ -34,5 +34,22 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Generate version identifier
+      uses: ./actions/generateVersion
+      id: generate_version
+      with:
+        major: 1
+        minor: 0
+
+      - name: Update package.json main entry
+      uses: jossef/action-set-json-field@v1
+      with:
+        file: packages/components/package.json
+        field: main
+        value: dist/index.js
+
+      - name: Set version
+      run: yarn version --no-git-tag-version --new-version ${{ steps.generate_version.outputs.version }}
+
       - name: Publish
-        run: npm publish
+        run: npm publish --tag ${{ steps.generate_version.outputs.tag }}
