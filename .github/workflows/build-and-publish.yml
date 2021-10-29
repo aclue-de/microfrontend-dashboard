@@ -2,6 +2,7 @@ name: build-and-publish
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   build-and-publish:
