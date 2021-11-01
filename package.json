@@ -2,7 +2,9 @@
   "name": "@aclue-de/microfrontend-startpage",
   "version": "0.1.0",
   "private": false,
-  "main": "./src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
