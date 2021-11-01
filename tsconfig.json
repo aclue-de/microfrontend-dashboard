@@ -30,6 +30,11 @@
     "outDir": "./dist"
   },
   "include": [
-    "src/components/**/*"
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/index.tsx",
+    "src/react-app-env.d.ts",
+    "src/ReportWebVitals.ts",
   ]
 }
