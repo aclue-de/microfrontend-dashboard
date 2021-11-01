@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "del-cli dist && babel src --out-dir dist --copy-files",
+    "build": "del-cli dist && tsc",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
