@@ -1,6 +1,6 @@
-import './App.css';
+import './Start.css';
 
-export const App = () => {
+export const Start = () => {
   return (
     <div className="App">
       <header className="App-header">

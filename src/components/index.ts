@@ -1,1 +1,3 @@
-export {App} from './App'
+import {Start} from './Start'
+
+export default Start
