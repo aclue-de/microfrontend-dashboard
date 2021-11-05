@@ -2,7 +2,7 @@
   "name": "@aclue-de/microfrontend-startpage",
   "version": "0.1.0",
   "private": false,
-  "main": "./src",
+  "main": "./src/components",
   "files": [
     "src"
   ],
@@ -50,9 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "publishConfig": {
-    "main": "dist/index.js",
-    "registry": "https://npm.pkg.github.com"
   }
 }
