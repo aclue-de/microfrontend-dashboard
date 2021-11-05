@@ -2,9 +2,10 @@
   "name": "@aclue-de/microfrontend-startpage",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "main": "./src",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -28,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "del-cli dist && NODE_ENV=production babel src --out-dir dist --copy-files",
+    "build": "tsc -b",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
