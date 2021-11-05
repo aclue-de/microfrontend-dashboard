@@ -23,10 +23,10 @@
     "noEmit": false
   },
   "include": [
-    "./src"
+    "./src/**/*"
   ],
   "exclude": [
     "./.github",
-    "./actions"
+    "./actions",
   ]
 }
