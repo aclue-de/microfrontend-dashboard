@@ -1,4 +1,4 @@
-import { Avatar, Button, createStyles, Divider, makeStyles, Theme, Typography } from '@material-ui/core'
+import { alpha, Avatar, Button, createStyles, Divider, makeStyles, Theme, Typography } from '@material-ui/core'
 import Paper from '@material-ui/core/Paper'
 
 const useNewsboxStyles = makeStyles((theme: Theme) =>
@@ -46,6 +46,9 @@ const useNewsboxStyles = makeStyles((theme: Theme) =>
         loadMoreNewsButton: {
             margin: 'auto auto 24px',
             color: theme.palette.info.dark,
+            '&:hover': {
+                backgroundColor: alpha('#1976d2', 0.04),
+            },
         },
     }),
 )
