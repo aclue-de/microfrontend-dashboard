@@ -1,5 +1,6 @@
-import { alpha, IconButton, IconButtonProps, withStyles } from '@material-ui/core'
-import { HelpOutlineOutlined } from '@material-ui/icons'
+import { alpha, IconButton, IconButtonProps } from '@mui/material';
+import withStyles from '@mui/styles/withStyles';
+import { HelpOutlineOutlined } from '@mui/icons-material'
 
 const StyledIconButton = withStyles(() => ({
     root: {
