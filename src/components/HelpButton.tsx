@@ -1,5 +1,5 @@
-import { IconButton, IconButtonProps } from '@material-ui/core'
-import { HelpOutlineOutlined } from '@material-ui/icons'
+import { IconButton, IconButtonProps } from '@mui/material'
+import { HelpOutlineOutlined } from '@mui/icons-material'
 
 export const HelpButton: React.FC<IconButtonProps> = props => {
     return (

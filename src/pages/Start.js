@@ -1,5 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { createGenerateClassName, createStyles, Grid, makeStyles, StylesProvider, ThemeProvider, Typography } from '@material-ui/core';
+import { Grid, ThemeProvider, StyledEngineProvider, Typography } from '@mui/material';
+import createGenerateClassName from '@mui/styles/createGenerateClassName';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import StylesProvider from '@mui/styles/StylesProvider';
 import { Adbox, HelpButton, KeyFigures, Newsbox } from '../components';
 import { theme } from '../theme/theme';
 const useStartStyles = makeStyles((theme) => createStyles({

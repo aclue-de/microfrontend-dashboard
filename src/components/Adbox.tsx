@@ -1,5 +1,7 @@
-import { Button, createStyles, makeStyles, Theme, Typography } from '@material-ui/core'
-import Paper from '@material-ui/core/Paper'
+import { Button, Theme, Typography } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import Paper from '@mui/material/Paper'
 
 const useNewsboxStyles = makeStyles((theme: Theme) =>
     createStyles({

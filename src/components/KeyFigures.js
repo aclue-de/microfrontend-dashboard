@@ -1,6 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { createStyles, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
-import { TrendingDown, TrendingFlat, TrendingUp } from '@material-ui/icons';
+import { Grid, Paper, Typography } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import { TrendingDown, TrendingFlat, TrendingUp } from '@mui/icons-material';
 const useKeyFiguresStyles = makeStyles((theme) => createStyles({
     keyFiguresContainer: {
         marginBottom: 4,

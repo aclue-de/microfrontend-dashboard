@@ -1,6 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Button, createStyles, makeStyles, Typography } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
+import { Button, Typography } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import Paper from '@mui/material/Paper';
 const useNewsboxStyles = makeStyles((theme) => createStyles({
     adboxContainer: {
         minHeight: 500,

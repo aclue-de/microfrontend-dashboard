@@ -1,5 +1,7 @@
-import { createStyles, Grid, makeStyles, Paper, Theme, Typography } from '@material-ui/core'
-import { TrendingDown, TrendingFlat, TrendingUp } from '@material-ui/icons'
+import { Grid, Paper, Theme, Typography } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import { TrendingDown, TrendingFlat, TrendingUp } from '@mui/icons-material'
 
 const useKeyFiguresStyles = makeStyles((theme: Theme) =>
     createStyles({
