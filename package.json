@@ -1,6 +1,5 @@
 {
   "name": "@aclue-de/microfrontend-startpage",
-  "version": "0.1.0",
   "private": false,
   "main": "index.js",
   "module": "index.js",
