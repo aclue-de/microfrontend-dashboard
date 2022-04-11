@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
@@ -28,9 +28,8 @@
     "strictNullChecks": false,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "./dist",
-    "noEmit": true
   },
   "include": [
-    "src"
+    "src",
   ]
 }
