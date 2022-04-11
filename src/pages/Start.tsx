@@ -7,13 +7,6 @@ import StylesProvider from '@mui/styles/StylesProvider';
 import { Adbox, HelpButton, KeyFigures, Newsbox } from '../components'
 import { theme } from '../theme/theme'
 
-
-declare module '@mui/styles/defaultTheme' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends Theme {}
-}
-
-
 const useStartStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -44,24 +37,24 @@ export const Start: React.FC = () => {
         <StylesProvider generateClassName={generateClassName}>
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={theme}>
-                                <div className={classes.root}>
-                                    <div className={classes.headerContainer}>
-                                        <Typography variant="h1" className={classes.title}>
-                                            Übersicht
-                                        </Typography>
-                                        <HelpButton className={classes.helpButton} />
-                                    </div>
-                                    <KeyFigures />
-                                    <Grid spacing={1} container>
-                                        <Grid item xs={12} sm={6} md={9} lg={9}>
-                                            <Newsbox />
-                                        </Grid>
-                                        <Grid item xs={12} sm={6} md={3} lg={3}>
-                                            <Adbox />
-                                        </Grid>
-                                    </Grid>
-                                </div>
-                        </ThemeProvider>
+                    <div className={classes.root}>
+                        <div className={classes.headerContainer}>
+                            <Typography variant="h1" className={classes.title}>
+                                Übersicht
+                            </Typography>
+                            <HelpButton className={classes.helpButton} />
+                        </div>
+                        <KeyFigures />
+                        <Grid spacing={1} container>
+                            <Grid item xs={12} sm={6} md={9} lg={9}>
+                                <Newsbox />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={3} lg={3}>
+                                <Adbox />
+                            </Grid>
+                        </Grid>
+                    </div>
+                </ThemeProvider>
             </StyledEngineProvider>
         </StylesProvider>
     );
