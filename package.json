@@ -30,7 +30,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "del-cli dist",
     "build": "tsc -b",
     "postbuild": "cp package.json dist/package.json",
     "test": "react-scripts test --passWithNoTests",
