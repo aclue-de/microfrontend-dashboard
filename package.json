@@ -31,7 +31,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc -b",
-    "postbuild": "cp package.json dist/package.json",
+    "postbuild": "cp package.json dist/package.json && cp .npmrc dist/.npmrc",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
