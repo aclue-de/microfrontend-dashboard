@@ -45,5 +45,8 @@ jobs:
       - name: Set version
         run: yarn version --no-git-tag-version --new-version ${{ steps.generate_version.outputs.version }}
 
+      - name: Copy files
+        run: yarn copy-files
+
       - name: Publish
         run: cd dist && npm publish --tag ${{ steps.generate_version.outputs.tag }}
