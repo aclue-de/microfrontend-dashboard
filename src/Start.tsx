@@ -19,33 +19,26 @@ const Title = styled(Typography)({
     color: '#222',
 })
 
-const generateClassName = createGenerateClassName({
-    productionPrefix: 'startpage',
-    seed: 'startpage',
-})
-
 const Start: React.FC = () => (
-    <StylesProvider generateClassName={generateClassName}>
-            <ThemeProvider theme={theme}>
-                <StartContainer>
-                    <HeaderContainer>
-                        <Title variant="h1">
-                            Übersicht
-                        </Title>
-                        <HelpButton />
-                    </HeaderContainer>
-                    <KeyFigures />
-                    <Grid spacing={1} container>
-                        <Grid item xs={12} sm={6} md={9} lg={9}>
-                            <Newsbox />
-                        </Grid>
-                        <Grid item xs={12} sm={6} md={3} lg={3}>
-                            <Placement />
-                        </Grid>
-                    </Grid>
-                </StartContainer>
-            </ThemeProvider>
-    </StylesProvider>
+    <ThemeProvider theme={theme}>
+        <StartContainer>
+            <HeaderContainer>
+                <Title variant="h1">
+                    Übersicht
+                </Title>
+                <HelpButton />
+            </HeaderContainer>
+            <KeyFigures />
+            <Grid spacing={1} container>
+                <Grid item xs={12} sm={6} md={9} lg={9}>
+                    <Newsbox />
+                </Grid>
+                <Grid item xs={12} sm={6} md={3} lg={3}>
+                    <Placement />
+                </Grid>
+            </Grid>
+        </StartContainer>
+    </ThemeProvider>
 );
 
 export default Start
