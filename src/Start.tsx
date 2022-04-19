@@ -1,6 +1,4 @@
 import { Box, Grid, styled, ThemeProvider, Typography } from '@mui/material'
-import createGenerateClassName from '@mui/styles/createGenerateClassName'
-import StylesProvider from '@mui/styles/StylesProvider'
 import React from 'react'
 import { HelpButton, KeyFigures, Newsbox, Placement } from './components'
 import { theme } from './theme/theme'
