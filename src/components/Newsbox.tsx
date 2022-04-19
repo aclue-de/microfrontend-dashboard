@@ -1,7 +1,5 @@
-import { alpha, Avatar, Box, Button, Divider, styled, Theme, Typography } from '@mui/material'
+import { alpha, Avatar, Box, Button, Divider, styled, Typography } from '@mui/material'
 import Paper from '@mui/material/Paper'
-import createStyles from '@mui/styles/createStyles'
-import makeStyles from '@mui/styles/makeStyles'
 
 const NewsboxContainer = styled(Paper)({
     minHeight: 500,

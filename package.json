@@ -7,7 +7,7 @@
   "types": "index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -b",
     "preview": "vite preview",
     "copy-files": "cp package.json dist/package.json && cp .npmrc dist/.npmrc"
   },
