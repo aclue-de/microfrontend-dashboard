@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const Newsbox: React.FC;
+declare const Newsbox: React.FC;
+export default Newsbox;

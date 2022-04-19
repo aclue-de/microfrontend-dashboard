@@ -1,121 +1,114 @@
-import { Grid, Paper, Theme, Typography } from '@mui/material';
-import createStyles from '@mui/styles/createStyles';
-import makeStyles from '@mui/styles/makeStyles';
 import { TrendingDown, TrendingFlat, TrendingUp } from '@mui/icons-material'
+import { Box, Grid, Paper, styled, Typography } from '@mui/material'
 
-const useKeyFiguresStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        keyFiguresContainer: {
-            marginBottom: 4,
-        },
-        keyFigureContainer: {
-            display: 'flex',
-            flexDirection: 'column',
-            minHeight: 160,
-            minWidth: 160,
-            width: 'inherit',
-            padding: '24px 0 10px 24px',
-        },
-        title: {
-            color: '#222',
-        },
-        value: {
-            fontSize: '36px',
-            color: '#000',
-            lineBreak: 'anywhere',
-        },
-        trend: {
-            marginTop: 'auto',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-        },
-        trendUp: {
-            color: theme.palette.success.main,
-        },
-        trendDown: {
-            color: theme.palette.error.main,
-        },
-        bold: {
-            fontWeight: 'bold',
-        },
-    }),
-)
+const KeyFigureContainer = styled(Paper)({
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: 160,
+    minWidth: 160,
+    width: 'inherit',
+    padding: '24px 0 10px 24px',
+})
 
-export const KeyFigures: React.FC = () => {
-    const classes = useKeyFiguresStyles()
+const Title = styled(Typography)({
+    color: '#222',
+})
 
+const Value = styled(Typography)({    
+    fontSize: '36px',
+    color: '#000',
+    lineBreak: 'anywhere',
+})
+
+const Trend = styled(Box)({
+    marginTop: 'auto',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+})
+
+const TrendUp = styled(TrendingUp)(({ theme }) => ({
+    color: theme.palette.success.main,
+}))
+
+const TrendDown = styled(TrendingDown)(({ theme }) => ({
+    color: theme.palette.error.main,
+}))
+
+const KeyFigures: React.FC = () => {
     return (
-        <Grid container spacing={1} className={classes.keyFiguresContainer}>
+        <Grid container spacing={1} sx={{ mb: 0.5 }}>
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper variant="elevation" elevation={3} className={classes.keyFigureContainer}>
-                    <Typography variant="caption" className={classes.title}>
+                <KeyFigureContainer variant="elevation" elevation={3}>
+                    <Title variant="caption">
                         Ansprache
-                    </Typography>
-                    <Typography className={classes.value}>€100.000,000</Typography>
-                    <div className={classes.trend}>
-                        <TrendingUp className={classes.trendUp} />
+                    </Title>
+                    <Value>€100.000,000</Value>
+                    <Trend>
+                        <TrendUp />
                         &nbsp;
-                        <Typography className={`${classes.trendUp} ${classes.bold}`} variant="caption">
+                        <Typography sx={{ color: theme => theme.palette.success.main, fontWeight: 'bold' }} variant="caption">
                             +15%
                         </Typography>
                         &nbsp;
                         <Typography variant="caption">zum Vortag</Typography>
-                    </div>
-                </Paper>
+                    </Trend>
+                </KeyFigureContainer>
             </Grid>
 
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper variant="elevation" elevation={3} className={classes.keyFigureContainer}>
-                    <Typography variant="caption" className={classes.title}>
+                <KeyFigureContainer variant="elevation" elevation={3}>
+                    <Title variant="caption">
                         Stornoquote
-                    </Typography>
-                    <Typography className={classes.value}>5,00%</Typography>
-                    <div className={classes.trend}>
-                        <TrendingDown className={classes.trendDown} />
+                    </Title>
+                    <Value>5,00%</Value>
+                    <Trend>
+                        <TrendDown />
                         &nbsp;
-                        <Typography className={`${classes.trendDown} ${classes.bold}`} variant="caption">
+                        <Typography  sx={{ color: theme => theme.palette.error.main, fontWeight: 'bold' }} variant="caption">
                             -2%
                         </Typography>
                         &nbsp;
                         <Typography variant="caption">zum Vortag</Typography>
-                    </div>
-                </Paper>
+                    </Trend>
+                </KeyFigureContainer>
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper variant="elevation" elevation={3} className={classes.keyFigureContainer}>
-                    <Typography variant="caption" className={classes.title}>
+                <KeyFigureContainer variant="elevation" elevation={3}>
+                    <Title variant="caption">
                         Absatz
-                    </Typography>
-                    <Typography className={classes.value}>15,000</Typography>
-                    <div className={classes.trend}>
-                        <TrendingDown className={classes.trendDown} />
+                    </Title>
+                    <Value>15,000</Value>
+                    <Trend>
+                        <TrendDown />
                         &nbsp;
-                        <Typography className={`${classes.trendDown} ${classes.bold}`} variant="caption">
+                        <Typography sx={{ color: theme => theme.palette.error.main, fontWeight: 'bold' }} variant="caption">
                             -10%
                         </Typography>
                         &nbsp;
                         <Typography variant="caption">zum Vortag</Typography>
-                    </div>
-                </Paper>
+                    </Trend>
+                </KeyFigureContainer>
             </Grid>
             <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper variant="elevation" elevation={3} className={classes.keyFigureContainer}>
-                    <Typography variant="caption" className={classes.title}>
+                <KeyFigureContainer variant="elevation" elevation={3}>
+                    <Title variant="caption">
                         Retourenquote
-                    </Typography>
-                    <Typography className={classes.value}>3,0%</Typography>
-                    <div className={classes.trend}>
+                    </Title>
+                    <Value>3,0%</Value>
+                    <Trend>
                         <TrendingFlat />
                         &nbsp;
-                        <Typography variant="caption" className={classes.bold}>
+                        <Typography sx={{ fontWeight: 'bold' }} variant="caption">
                             0%
                         </Typography>
                         &nbsp;
                         <Typography variant="caption">zum Vortag</Typography>
-                    </div>
-                </Paper>
+                    </Trend>
+                </KeyFigureContainer>
             </Grid>
         </Grid>
     )
 }
+
+export default KeyFigures

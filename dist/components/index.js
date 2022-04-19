@@ -1,11 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Newsbox = exports.Adbox = exports.HelpButton = exports.KeyFigures = void 0;
-var KeyFigures_1 = require("./KeyFigures");
-Object.defineProperty(exports, "KeyFigures", { enumerable: true, get: function () { return KeyFigures_1.KeyFigures; } });
-var HelpButton_1 = require("./HelpButton");
-Object.defineProperty(exports, "HelpButton", { enumerable: true, get: function () { return HelpButton_1.HelpButton; } });
-var Adbox_1 = require("./Adbox");
-Object.defineProperty(exports, "Adbox", { enumerable: true, get: function () { return Adbox_1.Adbox; } });
-var Newsbox_1 = require("./Newsbox");
-Object.defineProperty(exports, "Newsbox", { enumerable: true, get: function () { return Newsbox_1.Newsbox; } });
+exports.Newsbox = exports.Placement = exports.HelpButton = exports.KeyFigures = void 0;
+const KeyFigures_1 = __importDefault(require("./KeyFigures"));
+exports.KeyFigures = KeyFigures_1.default;
+const HelpButton_1 = __importDefault(require("./HelpButton"));
+exports.HelpButton = HelpButton_1.default;
+const Placement_1 = __importDefault(require("./Placement"));
+exports.Placement = Placement_1.default;
+const Newsbox_1 = __importDefault(require("./Newsbox"));
+exports.Newsbox = Newsbox_1.default;

@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const KeyFigures: React.FC;
+declare const KeyFigures: React.FC;
+export default KeyFigures;

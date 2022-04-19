@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Start = void 0;
-var jsx_runtime_1 = require("react/jsx-runtime");
-var react_1 = __importDefault(require("react"));
-var react_dom_1 = __importDefault(require("react-dom"));
-var Start_1 = require("./pages/Start");
-Object.defineProperty(exports, "Start", { enumerable: true, get: function () { return Start_1.Start; } });
-react_dom_1.default.render((0, jsx_runtime_1.jsx)(react_1.default.StrictMode, { children: (0, jsx_runtime_1.jsx)(Start_1.Start, {}, void 0) }, void 0), document.getElementById('root'));
+const jsx_runtime_1 = require("react/jsx-runtime");
+const react_1 = __importDefault(require("react"));
+const react_dom_1 = __importDefault(require("react-dom"));
+const Start_1 = __importDefault(require("./Start"));
+exports.Start = Start_1.default;
+react_dom_1.default.render((0, jsx_runtime_1.jsx)(react_1.default.StrictMode, { children: (0, jsx_runtime_1.jsx)(Start_1.default, {}) }), document.getElementById('root'));

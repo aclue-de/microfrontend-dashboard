@@ -1,4 +1,5 @@
-export { KeyFigures } from './KeyFigures';
-export { HelpButton } from './HelpButton';
-export { Adbox } from './Adbox';
-export { Newsbox } from './Newsbox';
+import KeyFigures from './KeyFigures';
+import HelpButton from './HelpButton';
+import Placement from './Placement';
+import Newsbox from './Newsbox';
+export { KeyFigures, HelpButton, Placement, Newsbox };

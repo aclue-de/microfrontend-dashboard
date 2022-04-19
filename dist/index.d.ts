@@ -1,2 +1,2 @@
-import { Start } from './pages/Start';
+import Start from './Start';
 export { Start };
